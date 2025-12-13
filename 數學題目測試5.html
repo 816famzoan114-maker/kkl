@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多項式除法考前練習1 - 數學（KaTeX 渲染版）</title>
+
+    <!-- 正確的 KaTeX CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body, {
+            delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '\\[', right: '\\]', display: true},
+                {left: '\\(', right: '\\)', display: false}
+            ],
+            throwOnError: false
+        });"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #004d40;
+            border-bottom: 2px solid #b2dfdb;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .problem-section {
+            margin-bottom: 40px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .question-text {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            padding-right: 150px;
+            position: relative;
+        }
+        .answer-container {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #c8e6c9;
+            background-color: #e8f5e9;
+            color: #1b5e20;
+            border-radius: 4px;
+            display: none;
+            font-weight: bold;
+        }
+        .show-answer-btn {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            position: absolute;
+            right: 10px;
+            top: 0;
+        }
+        .show-answer-btn:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>多項式除法考前練習1</h1>
+    <p>單元 8：多項式的除法原理</p>
+
+    <!-- 範例題目 -->
+    <div class="problem-section">
+        <h2>一、單選題 (每題 7 分)</h2>
+
+        <div class="question-text" id="q-1-1">
+            **1. ** 化簡 \((x-2)(x^2-3x+1) + (x+1)(x^3+2x^2-x+1)\)  
+            後得 \(x^3\) 項的係數為 \(a\)， \(x\) 項的係數為 \(b\)，則 \(a+b=\)  
+            <button class="show-answer-btn" onclick="toggleAnswer('ans-1-1', this)">顯示答案</button>
+            <div class="answer-container" id="ans-1-1">
+                正確答案：(5) 11
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /** 切換顯示或隱藏答案 */
+        function toggleAnswer(id, button) {
+            const answerDiv = document.getElementById(id);
+            if (answerDiv.style.display === "none" || answerDiv.style.display === "") {
+                answerDiv.style.display = "block";
+                button.textContent = "隱藏答案";
+                button.style.backgroundColor = "#d32f2f"; /* 紅色 */
+            } else {
+                answerDiv.style.display = "none";
+                button.textContent = "顯示答案";
+                button.style.backgroundColor = "#00796b"; /* 青綠色 */
+            }
+        }
+    </script>
+
+</body>
+</html>
